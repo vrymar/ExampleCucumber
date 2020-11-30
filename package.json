@@ -1,0 +1,26 @@
+{
+  "name": "examplecucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "suitest interactive node node_modules/cucumber/bin/cucumber-js features/**/*.feature --require step-definitions/**/*.ts --require cucumber/**/*.ts --require-module ts-node/register"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cucumber": "^4.0.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.2",
+    "@types/ramda": "^0.25.36",
+    "cucumber": "^4.2.1",
+    "cucumber-pretty": "^1.4.4",
+    "mocha": "^5.2.0",
+    "pretty": "^2.0.0",
+    "ramda": "^0.25.0",
+    "suitest-js-api": "^1.17.8",
+    "ts-node": "^7.0.0",
+    "typescript": "^3.0.1"
+  }
+}

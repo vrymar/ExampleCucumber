@@ -1,0 +1,15 @@
+{
+    "cucumberautocomplete.steps": [
+        "step-definitions/*.ts"
+    ],
+    "cucumberautocomplete.syncfeatures": "features/*.feature",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "debug.openDebug": "neverOpen",
+    "git.ignoreLimitWarning": true
+}
