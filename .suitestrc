@@ -1,11 +1,11 @@
 {
-  "username": "vitalii_rymar@epam.com",
-  "password": "Vr140106",
-  "orgId": "c324a7e7-cd44-40a7-ae5b-4bfffca13124",
-  "appConfigId": "e195f04f-92bb-465c-84c5-7170c0749bd9",
-  "deviceId": "95f9c91a-49ef-40f0-bf83-fd330d5601e7",
+  "username": "",
+  "password": "",
+  "orgId": "",
+  "appConfigId": "",
+  "deviceId": "",
 
-  "tokenKey": "297RVkvzd4",
-  "tokenPassword": "b1493567f925050fa249f5857f085606fa215ee2c1b9358e54032669af042c19",
-  "testPackId": 14195
+  "tokenKey": "",
+  "tokenPassword": "",
+  "testPackId": 
 }
