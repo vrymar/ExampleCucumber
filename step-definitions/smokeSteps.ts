@@ -1,4 +1,3 @@
-import { AssertionError, fail } from 'assert';
 import { Given, When, Then } from 'cucumber';
 import suitest, { assert, VRC } from 'suitest-js-api';
 
@@ -57,19 +56,11 @@ When(/^login is successful with email '(.*)' and password '(.*)'$/, async (email
 
     await assert.element(getSelector('emailInput')).doesNot().exists().timeout(2000).then(async () => { fail("Email field is not found.") });
 
-    await assert.element(getSelector('emailInput')).setText(email).then(async () => {
-        await assert.press(VRC.RIGHT).repeat(12).interval(100);
-        await assert.press(VRC.DOWN).repeat(1).interval(100);
-        await assert.press(VRC.ENTER);
-    });
+    await assert.element(getSelector('emailInput')).setText(email).then(goToCredentials());
 
     await assert.element(getSelector('passwordInput')).doesNot().exists().timeout(1000).then(async () => { fail("Password field is not found.") });
 
-    await assert.element(getSelector('passwordInput')).setText(password).then(async () => {
-        await assert.press(VRC.RIGHT).repeat(12).interval(100);
-        await assert.press(VRC.DOWN).repeat(1).interval(100);
-        await assert.press(VRC.ENTER);
-    });
+    await assert.element(getSelector('passwordInput')).setText(password).then(goToCredentials());
 
     await assert.sleep(5000);
 });
@@ -136,7 +127,12 @@ Then(/^logout is successful$/, async () => {
     endTest();
 });
 
-
 async function endTest() {
     suitest.endTest();
-};
+}
+
+async function goToCredentials() {
+     await assert.press(VRC.RIGHT).repeat(12).interval(100);
+     await assert.press(VRC.DOWN).repeat(1).interval(100);
+     await assert.press(VRC.ENTER);
+}
